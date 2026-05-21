@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodBoard Pro</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 id="welcomeText">
+      Welcome ✨
+    </h1>
+
+    <p class="tagline">
+      Track your moods & memories 💫
+    </p>
+
+    <!-- Date -->
+    <div class="date-box">
+      <input type="date" id="noteDate">
+    </div>
+
+    <!-- Quote -->
+    <div class="quote-box">
+      <p id="quote">
+        Choose your mood today ✨
+      </p>
+    </div>
+
+    <!-- Mood Buttons -->
+    <div class="mood-buttons">
+
+      <button class="mood-btn happy"
+              onclick="selectMood('😊 Happy')">
+        😊 Happy
+      </button>
+
+      <button class="mood-btn relaxed"
+              onclick="selectMood('😌 Relaxed')">
+        😌 Relaxed
+      </button>
+
+      <button class="mood-btn productive"
+              onclick="selectMood('🔥 Productive')">
+        🔥 Productive
+      </button>
+
+      <button class="mood-btn sad"
+              onclick="selectMood('🌧 Sad')">
+        🌧 Sad
+      </button>
+
+    </div>
+
+    <!-- Notes -->
+    <div class="notes-section">
+
+      <textarea id="noteInput"
+                placeholder="Write your memory here..."></textarea>
+
+      <button class="save-btn"
+              onclick="saveNote()">
+        Save Memory
+      </button>
+
+    </div>
+
+    <!-- Reminder -->
+    <div class="reminder-box">
+      <p>
+        💡 Don’t forget to save today’s mood!
+      </p>
+    </div>
+
+    <!-- Saved Notes -->
+    <div class="saved-notes">
+
+      <h2>Saved Memories ✨</h2>
+
+      <div id="notesContainer"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
